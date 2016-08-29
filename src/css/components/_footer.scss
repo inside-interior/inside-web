@@ -1,0 +1,46 @@
+.footer {
+	padding: 0 rem(48) rem(48);
+
+	background: $c-dark-grey;
+
+	color: $tc-light;
+}
+
+.footer__logo-wrapper {
+	text-align: center;
+	font-size: rem(16);
+}
+
+.footer__soc-med-link {
+	display: inline-block;
+
+	// Remove highlight color when link is clicked
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+	&:not(:last-child) {
+		margin-right: rem(8);
+	}
+}
+
+.footer__soc-med-logo, use>svg {
+	width: rem(40);
+	height: rem(40);
+	margin: 0 auto;
+
+	transition: fill 0.3s;
+}
+
+.footer__soc-med-link:hover {
+	.footer__soc-med-logo, use>svg {
+		fill: $c-light-grey;
+	}
+}
+
+.footer__copyright {
+	margin-top: rem(8);
+
+	font-size: rem(12);
+	text-transform: uppercase;
+	text-align: center;
+}

@@ -1,0 +1,18 @@
+.loading-page {
+	opacity: 0;
+	transition: 1s;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background: black;
+	color: $tc-light;
+	z-index: -1;
+}
+
+.loading .loading-page {
+	opacity: 1;
+}

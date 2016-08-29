@@ -1,0 +1,48 @@
+.section {
+	padding: rem(64) rem(48);
+
+	text-align: center;
+
+	@media (min-width: em(752)) {
+		padding: rem(96) rem(64);
+	}
+}
+
+.section__content {
+	max-width: rem(960);
+	margin: 0 auto;
+}
+
+.js .section--projects {
+	@media (max-width: em(555)) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.section:nth-of-type(odd) {
+
+}
+
+.section:nth-of-type(even) {
+	color: $tc-light;
+	background: $c-dark-grey;
+}
+
+.section__title {
+	display: inline-block;
+
+	padding: 0 rem(24);
+	margin-bottom: rem(32);
+	border: em(5,30) solid currentColor;
+
+	line-height: 1.5;
+
+	.js:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+
+	@media (min-width: em(752)) {
+		margin-bottom: rem(40);
+	}
+}

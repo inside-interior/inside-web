@@ -1,0 +1,172 @@
+.expertise-wrapper {
+	.js:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: rem(32);
+	}
+}
+
+.expertise__title {
+	font-family: $proxima-fb-font-stack;
+	font-weight: bold;
+	color: $tc-brand;
+	line-height: 1.5;
+	letter-spacing: em(2,24);
+	word-break: break-word;
+
+	.proxima-loaded & {
+		font-family: $proxima-loaded-font-stack;
+	}
+}
+
+.expertise__detail {
+	max-width: rem(600);
+
+	margin: 0 auto;
+}
+
+@media (min-width: em(976)) {
+	.expertises {
+		margin-top: rem(14);
+
+		font-size: 0; // To remove weird inline spacing
+
+		display: flex;
+	}
+
+	.expertise-wrapper {
+		transform: perspective(100px) !important; // WARNING: If changed, need to change .expertises margin-top as well
+		transform-style: preserve-3d;
+
+		display: inline-block;
+		vertical-align: top; // To align with the siblings properly
+
+		flex: 0 0 33.33%;
+
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 0;
+		}
+
+		&:first-child {
+			order: 1;
+		}
+
+		&:last-child {
+			order: 2;
+		}
+
+		&.js-last-hover {
+			z-index: $z-expertise; // So that the box shadow is shown at all sides
+		}
+	}
+
+	.expertise {
+		padding: 0 rem(32);
+		height: 500px; // TODO: change depending on the content
+
+		background-size: cover, cover;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		transition: transform 1s;
+
+		.js .js-last-hover & {
+			transform: translateZ(5px); // WARNING: If changed, need to change .expertises margin-top as well
+
+			&::before, &::after {
+				opacity: 1;
+			}
+		}
+
+		.no-js &::before {
+			opacity: 1;
+		}
+
+		$tint-color: rgba(mix($c-brand-dark, $c-black, 60%), 0.88);
+		$tint-bg: linear-gradient(
+		              $tint-color,
+		              $tint-color
+		          );
+
+		.expertise-wrapper:first-child & {
+			background-image: $tint-bg, url("/images/expertises/interior_design_bg-320.jpg");
+		}
+
+		.expertise-wrapper:nth-child(2) & {
+			background-image: $tint-bg, url("/images/expertises/furniture_design_bg-320.jpg");
+		}
+
+		.expertise-wrapper:last-child & {
+			background-image: $tint-bg, url("/images/expertises/architecture_bg-320.jpg");
+		}
+
+		&::before {
+			content: "";
+
+			display: block;
+			border: solid 1px $c-white;
+
+			position: absolute;
+			top: rem(16);
+			right: rem(16);
+			bottom: rem(16);
+			left: rem(16);
+
+			opacity: 0;
+
+			transition: opacity 1s;
+		}
+
+		&::after {
+			content: "";
+
+			display: block;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			box-shadow: 0 0 50px $c-black;
+
+			opacity: 0;
+
+			transition: opacity 1s;
+		}
+	}
+
+	.expertise__title {
+		color: $tc-light;
+		font-size: rem(26.4);
+		line-height: 1.25;
+
+		.expertise:nth-child(3) & {
+			line-height: 2;
+		}
+	}
+
+	.expertise__detail {
+		font-size: rem(18.4);
+		line-height: 1.25;
+
+		opacity: 0;
+
+		max-height: 0;
+		margin-top: rem(16);
+
+		transition: opacity 1s, max-height 1s;
+
+		.no-js &, .js-last-hover & {
+			opacity: 1;
+
+			max-height: 300px; // TODO: value change according to content
+		}
+	}
+}

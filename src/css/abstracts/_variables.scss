@@ -1,0 +1,44 @@
+/*************************
+ * Color
+ *************************/
+$c-brand-light: #1DAFEC;
+$c-brand-dark: #1793C6;
+$c-white: #FAFAFA;
+$c-light-grey: #aaaaaa;
+$c-dark-grey: #282D2E;
+$c-black: #1c1f20;
+
+/*************************
+ * Z-Index
+ *************************/
+$z-expertise: 1;
+$z-nav: 2;
+$z-menu-btn: 3;
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+	'small': (min-width: 320px),
+	'medium': (min-width: 768px),
+	'large': (min-width: 1024px),
+) !default;
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

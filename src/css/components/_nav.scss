@@ -1,0 +1,135 @@
+.nav {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: $z-nav;
+
+	color: $tc-light;
+	text-align: right;
+
+	padding: rem(40);
+
+	display: flex;
+	flex-direction: column;
+
+	background: $c-dark-grey;
+	box-shadow: 0 0 0 9999px rgba(0,0,0,0); // Fallback
+	box-shadow: 0 0 0 100vmax rgba(0,0,0,0);
+
+	transform: translateX(100%);
+	transition: all 0.25s ease-out;
+
+	@media (min-width: em(752)) {
+		padding-left: rem(88);
+	}
+}
+
+.menu-open {
+	overflow-y: hidden; // Disable scrolling when menu is open
+}
+
+.menu-open .nav {
+	transform: none;
+
+	box-shadow: 0 0 0 9999px rgba(0,0,0,.6); // Fallback
+	box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+}
+
+.nav__links, .nav__soc-links {
+	display: inline-block;
+}
+
+.nav__links {
+	font-size: rem(32);
+
+	margin-top: auto; // push content to bottom
+
+	border-bottom: 3px solid $c-brand-dark;
+
+	padding-left: em(32,40);
+	padding-bottom: em(20,40);
+	margin-bottom: em(20,40);
+
+	@media (min-width: em(600)) {
+		font-size: rem(40);
+	}
+
+	@media (min-width: em(752)) {
+		padding-left: em(50,40);
+	}
+}
+
+@keyframes slide_from_right {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+$animation_duration : 0.4s;
+$animation_delay    : 0.075s;
+$num_of_links       : 4;
+
+.nav__links__link {
+	color: inherit;
+	font-family: $axis-fb-font-stack;
+	text-transform: uppercase;
+	line-height: 1;
+
+	display: block;
+
+	margin-bottom: em(8,40);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		color: $tc-brand;
+	}
+
+	.axis-loaded & {
+		font-family: $axis-loaded-font-stack;
+	}
+
+	opacity: 0;
+
+	.menu-open & {
+		animation: slide_from_right $animation_duration 0s 1 forwards;
+	}
+
+	@for $i from 1 through $num_of_links {
+		.menu-open &:nth-child(#{$i}) {
+			animation-delay: ($i - 1) * $animation_delay;
+		}
+	}
+}
+
+.backgroundcliptext .nav__links__link {
+	background-image: linear-gradient(to left, $c-brand-dark 50%, $c-white 50%);
+	background-size: 200% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	transition: background-position 0.4s linear;
+
+	&:hover {
+		background-position: 100% 0;
+	}
+}
+
+.nav__copyright {
+	font-size: rem(16);
+	text-transform: uppercase;
+
+	opacity: 0;
+
+	.menu-open & {
+		animation: slide_from_right $animation_duration ($animation_delay * $num_of_links) 1 forwards;
+	}
+}

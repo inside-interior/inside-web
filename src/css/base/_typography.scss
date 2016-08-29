@@ -1,0 +1,94 @@
+$tc-dark: $c-dark-grey;
+$tc-light: $c-white;
+$tc-brand: $c-brand-dark;
+
+$axis-fb-font-stack: 'Arial Black', Gadget, sans-serif;
+$axis-loaded-font-stack: 'axis', 'Arial Black', Gadget, sans-serif;
+$proxima-fb-font-stack: 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+$proxima-loaded-font-stack: 'proxima', 'Open Sans', 'Gill Sans MT', 'Gill Sans', Corbel, Arial, sans-serif;
+
+@font-face{
+	font-family: 'axis';
+	src: url('/font/axis.eot');
+	src: url('/font/axis.eot?#iefix')   format('embedded-opentype'),
+	     url('/font/axis.woff2')        format('woff2'),
+	     url('/font/axis.woff')         format('woff'),
+	     url('/font/axis.ttf')          format('truetype'),
+	     url('/font/axis.svg#axisbold') format('svg');
+}
+
+@font-face{
+	font-family: 'proxima';
+	src: url('/font/ProximaNova.eot');
+	src: url('/font/ProximaNova.eot?#iefix')   format('embedded-opentype'),
+	     url('/font/ProximaNova.woff2')        format('woff2'),
+	     url('/font/ProximaNova.woff')         format('woff'),
+	     url('/font/ProximaNova.ttf')          format('truetype'),
+	     url('/font/ProximaNova.svg#axisbold') format('svg');
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	color: $tc-dark;
+	font-size: rem(20);
+	font-family: $proxima-fb-font-stack;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.25;
+	// background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 23px, red 23px, red 24px); // baseline of 24px - http://zellwk.com/blog/web-typography-broken/
+
+	.proxima-loaded & {
+		font-family: $proxima-loaded-font-stack;
+	}
+
+	@media (min-width: em(752)) {
+		font-size: rem(22.4);
+		line-height: 1.5;
+	}
+}
+
+h1, h2, h3 {
+	margin: 0;
+
+	font-family: $axis-fb-font-stack;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1;
+
+	.axis-loaded & {
+		font-family: $axis-loaded-font-stack;
+	}
+}
+
+h1 {
+	font-size: rem(64);
+
+
+	@media (min-width: em(752)) {
+		font-size: rem(128);
+		line-height: 0.85;
+	}
+}
+
+h2 {
+	font-size: rem(30);
+
+	@media (min-width: em(752)) {
+		font-size: rem(40);
+	}
+}
+
+h3 {
+	font-size: rem(24);
+
+	@media (min-width: em(752)) {
+		font-size: rem(32);
+	}
+}
+
+a {
+	color: $tc-brand;
+	text-decoration: none;
+}

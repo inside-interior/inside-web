@@ -1,0 +1,134 @@
+@keyframes rotate {
+	from {
+		opacity: 0;
+		transform: rotateX(-90deg);
+		transform-origin: center bottom;
+	}
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+		transform-origin: center bottom;
+	}
+}
+
+.intro {
+	$tint-gradient: linear-gradient(
+	                    rgba(0, 0, 0, 0.7),
+	                    rgba(0, 0, 0, 0.7)
+	                );
+
+	height: rem(640); // Fallback
+	height: 100vh;
+
+	background-image:
+		$tint-gradient,
+		url('/images/header_bg-xs.jpg');
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	color: $tc-light;
+
+	@media (min-width: em(200)) {
+		background-image:
+			$tint-gradient,
+			url('/images/header_bg-sm.jpg');
+	}
+
+	@media (min-width: em(400)) {
+		background-image:
+			$tint-gradient,
+			url('/images/header_bg-me.jpg');
+	}
+
+	@media (min-width: em(600)) {
+		background-image:
+			$tint-gradient,
+			url('/images/header_bg-la.jpg');
+	}
+
+	@media (min-width: em(800)) {
+		background-image:
+			$tint-gradient,
+			url('/images/header_bg-xl.jpg');
+	}
+}
+
+.intro__intro {
+	max-width: rem(217); // fallback for min-content
+	max-width: min-content;
+
+	@media (min-width: em(752)) {
+		max-width: rem(434); // fallback for min-content
+		max-width: min-content;
+	}
+}
+
+.intro__logo {
+	width: rem(128);
+	height: rem(64);
+
+	.js:not(.external-js-timeout):not(.is-ie) & {
+		opacity: 0;
+	}
+
+	.js:not(.external-js-timeout):not(.is-ie) .js-intro-bg-img-loaded & {
+		animation: rotate 0.8s 0s 1 forwards;
+	}
+
+	@media (min-width: em(752)) {
+		width: rem(160);
+		height: rem(80);
+	}
+}
+
+.intro__title {
+	.js:not(.external-js-timeout):not(.is-ie) & {
+		opacity: 0;
+	}
+
+	.js:not(.external-js-timeout):not(.is-ie) .js-intro-bg-img-loaded & {
+		animation: rotate 0.8s 0.25s 1 forwards;
+	}
+}
+
+.intro__tagline {
+	font-family: $proxima-fb-font-stack;
+	font-size: rem(20);
+
+	text-align: justify;
+	text-align-last: justify;
+
+	letter-spacing: em(8.4,20); // Give more spacing on second line
+
+	// No animation for IE because animation is not working when :first-line pseudo-element is used
+	.js:not(.external-js-timeout):not(.is-ie) & {
+		opacity: 0;
+	}
+
+	.js:not(.external-js-timeout):not(.is-ie) .js-intro-bg-img-loaded & {
+		animation: rotate 0.8s 0.5s 1 forwards;
+	}
+
+	.proxima-loaded & {
+		font-family: $proxima-loaded-font-stack;
+	}
+
+	@media (min-width: em(752)) {
+		font-size: rem(24);
+
+		padding-left: rem(8); // To align with the text above (company name)
+	}
+}
+
+.intro__tagline:first-line {
+	letter-spacing: em(6,20);
+
+	@media (min-width: em(752)) {
+		letter-spacing: rem(3.2);
+	}
+}

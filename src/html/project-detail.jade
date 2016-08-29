@@ -1,0 +1,92 @@
+- var cur_project = locals.cur_project
+
+doctype html
+html.no-js(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.')
+		meta(name='robots', content='noindex')
+		title= cur_project.title + ' | Inside Interior'
+
+		script(type='text/javascript', src='/js/inline-head.js')
+		link(rel='stylesheet', href='/css/project-detail.css')
+
+		link(rel='preload', href='/font/axis.woff2', as='font', type='font/woff2', crossorigin)
+		link(rel='preload', href='/font/ProximaNova.woff2', as='font', type='font/woff2', crossorigin)
+		noscript
+			link(rel='stylesheet', href='/css/font.css')
+		script(type='text/javascript', src='/js/project-detail.js', async='')
+
+		link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+		link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
+		link(rel='manifest', href='/manifest.json')
+		link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+		meta(name='theme-color', content='#ffffff')
+
+	body
+		span.menu-btn.js-menu-btn menu
+		nav.nav.js-nav
+			.nav__links
+				a.nav__links__link.js-nav-link(data-scroll='', href='/#about') About
+				a.nav__links__link.js-nav-link(data-scroll='', href='/#expertise') Expertise
+				a.nav__links__link.js-nav-link(data-scroll='', href='/#projects') Projects
+				a.nav__links__link.js-nav-link(data-scroll='', href='/#contact') Contact
+			p.nav__copyright © 2016 Inside Interior
+		main.project-detail-page.js-page-content
+			- function generateImgPath(permalink, img_name) { return '/images/projects/' + permalink + '/' + img_name }
+			div.project
+				h1.project__title.js-title= cur_project.title
+				h2.project__detail.js-detail= cur_project.detail
+			div.project__gallery.js-gallery(data-thumbnail-src='/images/projects/thumb-' + cur_project.permalink + '.png')
+				each image in cur_project.images
+					- var img_src = generateImgPath(cur_project.permalink, image)
+
+					- var srcset_str = img_src + '-xs.jpg 200w,'
+					- srcset_str    += img_src + '-sm.jpg 500w,'
+					- srcset_str    += img_src + '-me.jpg 800w,'
+					- srcset_str    += img_src + '-la.jpg 1100w,'
+					- srcset_str    += img_src + '-xl.jpg 1400w,'
+					- srcset_str    += img_src + '-xxl.jpg 1700w'
+
+					- var sizes_str = '(min-width: 47em) calc(100vw - 8rem), '
+					- sizes_str    += '(min-width: 60em) 75vw, '
+					- sizes_str    += '(min-width: 66.67em) 50rem, '
+					- sizes_str    += '100vw'
+					figure.project__photo-container.js-photo
+						img.project__photo(srcset=srcset_str,
+						                   sizes=sizes_str,
+						                   src=img_src + '-me.jpg',
+						                   alt=cur_project.title)
+			- var next_project = locals.next_project
+			a.next-project.adjacent-project.js-next-project(href='/' + next_project.permalink)
+				div.next-project-wrapper.js-next-project-div
+					div.next-project__detail
+						p.next-project__text Next Project
+						h2.next-project__title= next_project.title
+					- var img_src = generateImgPath(next_project.permalink, next_project.homepage_img)
+
+					- var srcset_str = img_src + '-xs.jpg 200w,'
+					- srcset_str    += img_src + '-sm.jpg 500w,'
+					- srcset_str    += img_src + '-me.jpg 800w,'
+					- srcset_str    += img_src + '-la.jpg 1100w,'
+					- srcset_str    += img_src + '-xl.jpg 1400w,'
+					- srcset_str    += img_src + '-xxl.jpg 1700w'
+
+					- var sizes_str = '(min-width: 47em) calc(100vw - 8rem), '
+					- sizes_str    += '(min-width: 60em) 0rem, '
+					- sizes_str    += '100vw'
+
+					picture
+						source(media='(min-width: 60em)' srcset='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==')
+						img.next-project__photo.js-next-project-img(srcset=srcset_str,
+						                                            sizes=sizes_str,
+						                                            src=img_src + '-me.jpg',
+						                                            alt=next_project.title)
+			- var prev_project = locals.prev_project
+			a.prev-project.adjacent-project(href='/' + prev_project.permalink)
+				div.prev-project__detail.js-prev-project-div
+					p.prev-project__text Previous Project
+					h2.prev-project__title= prev_project.title
+		script(type='text/javascript', src='/js/inline-body.js')

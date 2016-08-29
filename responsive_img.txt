@@ -1,0 +1,22 @@
+## home
+	- crop to square
+	- mobile:  175px - 415px
+	- tablet:  227px - 405px
+	- desktop: 267px - 315px
+
+	- resize to: 175px, 310px, 445px, 580px, 715px, 850px
+
+## project detail
+	- mobile:  200px - 752px
+	- tablet:  624px - 831px
+	- desktop: 720px - 800px
+
+	- resize to: 200px, 500px, 800px, 1100px, 1400px, 1700px
+
+## background images
+
+200px, 400px, 600px, 800px, 1000px
+
+## expertise
+
+280x500 - 320x500

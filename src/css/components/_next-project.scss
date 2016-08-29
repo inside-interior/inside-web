@@ -1,0 +1,170 @@
+$next-project-hover-transition-duration: 0.3s;
+
+.next-project, .prev-project {
+	display: block;
+	max-width: rem(896); // 1024 - 64 * 2
+
+	color: $tc-light;
+
+	position: relative;
+
+	@media (min-width: em(752)) {
+		box-sizing: content-box;
+		margin: 0 rem(64) rem(64);
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		margin-left: auto;
+		margin-right: auto;
+
+		.js & {
+			position: absolute;
+			top: 50%;
+			right: 0;
+
+			margin: 0;
+
+			transition: transform $next-project-hover-transition-duration;
+
+			transform: translateY(-50%) translateX(50%) rotate(-90deg) translateY(-20%);
+		}
+
+		.js &:hover {
+			transform: translateY(-50%) translateX(50%) rotate(-90deg) translateY(-100%);
+		}
+	}
+}
+
+.next-project-wrapper {
+	// For image tint effect
+	&::before {
+		content: '';
+		display: block;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background: rgba($c-black, 0.7);
+
+		z-index: 1; // Hack because of scroll reveal (the background img become on top of the text)
+	}
+
+	.js:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js &::before {
+			top: 25px;
+			bottom: -50px;
+
+			background: none;
+		}
+	}
+}
+
+.prev-project {
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			right: auto;
+			left: 0;
+
+			transform: translateY(-50%) translateX(-50%) rotate(90deg) translateY(-20%);
+		}
+
+		.js &:hover {
+			transform: translateY(-50%) translateX(-50%) rotate(90deg) translateY(-100%);
+		}
+	}
+}
+
+.next-project__detail, .prev-project__detail {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	z-index: 1; // Hack because of scroll reveal (the background img become on top of the text)
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			position: static;
+		}
+	}
+}
+
+.prev-project__detail {
+	.js.start-gte-960:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+}
+
+.next-project__text, .prev-project__text {
+	font-size: rem(18);
+	text-transform: uppercase;
+
+	margin-bottom: rem(4);
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			color: $tc-dark;
+		}
+	}
+}
+
+.next-project__title, .prev-project__title {
+	letter-spacing: 1px;
+
+	padding: 0 rem(48);
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			padding: 0;
+
+			color: $tc-dark;
+
+			opacity: 0;
+
+			transition: opacity $next-project-hover-transition-duration;
+		}
+
+		.js .adjacent-project:hover & {
+			opacity: 1;
+		}
+	}
+}
+
+.next-project__photo {
+	display: block;
+
+	&::after {
+		content: 'asdasd';
+		display: block;
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			display: none;
+		}
+	}
+}
+
+.prev-project {
+	display: none;
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			display: block;
+		}
+	}
+}

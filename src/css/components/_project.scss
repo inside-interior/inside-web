@@ -1,0 +1,210 @@
+.project-detail-page {
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			overflow-x: hidden;
+
+			padding: rem(64) 0;
+
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.project {
+	padding: rem(64) rem(48) 0;
+
+	text-align: center;
+
+	@media (min-width: em(752)) {
+		padding: rem(96) rem(64) 0;
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.js & {
+			padding: 0;
+		}
+	}
+}
+
+.project__title {
+	font-size: rem(48);
+	word-break: break-word;
+
+	margin-bottom: rem(8);
+
+	.js:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+}
+
+.project__detail {
+	font-family: $proxima-fb-font-stack;
+	font-size: rem(16);
+	text-transform: capitalize;
+
+	.proxima-loaded & {
+		font-family: $proxima-loaded-font-stack;
+	}
+
+	.js:not(.external-js-timeout) & {
+		visibility: hidden;
+	}
+}
+
+.project__gallery {
+	max-width: rem(1024);
+	margin: rem(32) auto 0;
+
+	@media (min-width: em(752)) {
+		padding: 0 rem(64);
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		&.flickity-enabled {
+			width: 100%;
+			height: 100%;
+			max-width: none;
+			padding: 0;
+			margin-bottom: rem(40);
+
+			flex-grow: 1;
+
+			position: relative;
+		}
+
+		.js & {
+			visibility: hidden;
+		}
+	}
+}
+
+.flickity-viewport {
+	width: 100%;
+	max-height: 100%;
+
+	position: absolute;
+	top: 50%;
+
+	transform: translateY(-50%);
+}
+
+.project__photo-container {
+	// Avoiding content jump
+	height: 0;
+	padding-bottom: 69.27%; // (2480 / 3580)
+	overflow: hidden;
+
+	margin-bottom: rem(8);
+
+	@media (min-width: em(600)) {
+		margin-bottom: rem(40);
+	}
+
+	@media (max-width: em(959)) {
+		.js.start-lt-960:not(.external-js-timeout) & {
+			visibility: hidden;
+		}
+	}
+
+	@media (min-width: em(960)) { // When carousel is setup
+		height: 100%;
+		padding-bottom: initial;
+		overflow: initial;
+
+		margin-bottom: 0;
+	}
+}
+
+.project__photo {
+	display: block;
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.flickity-enabled & {
+			width: auto;
+			height: 100%;
+			max-width: 75vw;
+			max-height: 51.95vw; // (2480 / 3580) * 75 (max-width)
+
+			transition: opacity 0.3s, transform 1s;
+		}
+
+		.flickity-enabled .project__photo-container:not(.is-selected) & {
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes slide_from_bottom {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.project__thumbnails {
+	display: none;
+
+	@media (min-width: em(960)) { // When carousel is setup
+		.flickity-enabled + & {
+			display: block;
+			text-align: center;
+		}
+
+		.js.start-gte-960:not(.external-js-timeout) & {
+			visibility: hidden;
+		}
+	}
+}
+
+.project__thumbnail {
+	width: rem(100);
+	min-height: rem(71);
+
+	position: relative;
+	display: inline-block;
+
+	font-size: 0;
+
+	cursor: pointer;
+
+	// For image tint effect
+	&::before {
+		content: '';
+		display: block;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background: rgba($c-black, 0.8);
+
+		transition: opacity 0.3s;
+	}
+
+	&.is-selected::before {
+		opacity: 0;
+	}
+
+	&:not(:last-child) {
+		margin-right: rem(10);
+	}
+
+	@for $i from 1 through 8 {
+		&:nth-child(#{$i}) {
+			background-position: -0px (($i - 1) * -71px);
+		}
+	}
+}

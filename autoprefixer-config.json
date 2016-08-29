@@ -1,0 +1,24 @@
+{
+	"browsers": [
+		"Explorer >= 10",
+		"ExplorerMobile >= 9.9",
+		"Edge >= 12",
+
+		"Firefox >= 2",
+		"Firefox ESR",
+		"FirefoxAndroid",
+
+		"Chrome >= 4",
+		"ChromeAndroid >= 49",
+
+		"Safari >= 3.1",
+		"iOS >= 3.2",
+
+		"Opera >= 12.1",
+		"OperaMini >= 8",
+		"OperaMobile >= 12",
+
+		"Android >= 4",
+		"BlackBerry >= 7"
+	]
+}
