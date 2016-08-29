@@ -11,7 +11,7 @@ gulp.task('inline-js', function () {
 					base          : 'dist/',
 					js            : uglify,
 					disabledTypes : ['svg', 'img', 'css'],
-					ignore        : ['/js/home.js', '/js/project-detail.js']
+					ignore        : ['js/home.js', '../js/project-detail.js']
 				}
 			)
 		)

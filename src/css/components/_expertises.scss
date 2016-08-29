@@ -95,15 +95,15 @@
 		          );
 
 		.expertise-wrapper:first-child & {
-			background-image: $tint-bg, url("/images/expertises/interior_design_bg-320.jpg");
+			background-image: $tint-bg, url("../images/expertises/interior_design_bg-320.jpg");
 		}
 
 		.expertise-wrapper:nth-child(2) & {
-			background-image: $tint-bg, url("/images/expertises/furniture_design_bg-320.jpg");
+			background-image: $tint-bg, url("../images/expertises/furniture_design_bg-320.jpg");
 		}
 
 		.expertise-wrapper:last-child & {
-			background-image: $tint-bg, url("/images/expertises/architecture_bg-320.jpg");
+			background-image: $tint-bg, url("../images/expertises/architecture_bg-320.jpg");
 		}
 
 		&::before {

@@ -10,36 +10,36 @@ html.no-js(lang='en')
 		title= cur_project.title + ' | Inside Interior'
 
 		script(type='text/javascript', src='/js/inline-head.js')
-		link(rel='stylesheet', href='/css/project-detail.css')
+		link(rel='stylesheet', href='../css/project-detail.css')
 
-		link(rel='preload', href='/font/axis.woff2', as='font', type='font/woff2', crossorigin)
-		link(rel='preload', href='/font/ProximaNova.woff2', as='font', type='font/woff2', crossorigin)
+		link(rel='preload', href='../font/axis.woff2', as='font', type='font/woff2', crossorigin)
+		link(rel='preload', href='../font/ProximaNova.woff2', as='font', type='font/woff2', crossorigin)
 		noscript
-			link(rel='stylesheet', href='/css/font.css')
-		script(type='text/javascript', src='/js/project-detail.js', async='')
+			link(rel='stylesheet', href='../css/font.css')
+		script(type='text/javascript', src='../js/project-detail.js', async='')
 
-		link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
-		link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
-		link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
-		link(rel='manifest', href='/manifest.json')
-		link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+		link(rel='apple-touch-icon', sizes='180x180', href='../apple-touch-icon.png')
+		link(rel='icon', type='image/png', href='../favicon-32x32.png', sizes='32x32')
+		link(rel='icon', type='image/png', href='../favicon-16x16.png', sizes='16x16')
+		link(rel='manifest', href='../manifest.json')
+		link(rel='mask-icon', href='../safari-pinned-tab.svg', color='#5bbad5')
 		meta(name='theme-color', content='#ffffff')
 
 	body
 		span.menu-btn.js-menu-btn menu
 		nav.nav.js-nav
 			.nav__links
-				a.nav__links__link.js-nav-link(data-scroll='', href='/#about') About
-				a.nav__links__link.js-nav-link(data-scroll='', href='/#expertise') Expertise
-				a.nav__links__link.js-nav-link(data-scroll='', href='/#projects') Projects
-				a.nav__links__link.js-nav-link(data-scroll='', href='/#contact') Contact
+				a.nav__links__link.js-nav-link(data-scroll='', href='../#about') About
+				a.nav__links__link.js-nav-link(data-scroll='', href='../#expertise') Expertise
+				a.nav__links__link.js-nav-link(data-scroll='', href='../#projects') Projects
+				a.nav__links__link.js-nav-link(data-scroll='', href='../#contact') Contact
 			p.nav__copyright © 2016 Inside Interior
 		main.project-detail-page.js-page-content
-			- function generateImgPath(permalink, img_name) { return '/images/projects/' + permalink + '/' + img_name }
+			- function generateImgPath(permalink, img_name) { return '../images/projects/' + permalink + '/' + img_name }
 			div.project
 				h1.project__title.js-title= cur_project.title
 				h2.project__detail.js-detail= cur_project.detail
-			div.project__gallery.js-gallery(data-thumbnail-src='/images/projects/thumb-' + cur_project.permalink + '.png')
+			div.project__gallery.js-gallery(data-thumbnail-src='../images/projects/thumb-' + cur_project.permalink + '.png')
 				each image in cur_project.images
 					- var img_src = generateImgPath(cur_project.permalink, image)
 
@@ -60,7 +60,7 @@ html.no-js(lang='en')
 						                   src=img_src + '-me.jpg',
 						                   alt=cur_project.title)
 			- var next_project = locals.next_project
-			a.next-project.adjacent-project.js-next-project(href='/' + next_project.permalink)
+			a.next-project.adjacent-project.js-next-project(href='../' + next_project.permalink)
 				div.next-project-wrapper.js-next-project-div
 					div.next-project__detail
 						p.next-project__text Next Project

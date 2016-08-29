@@ -36,25 +36,25 @@
 	@media (min-width: em(200)) {
 		background-image:
 			$tint-gradient,
-			url('/images/header_bg-sm.jpg');
+			url('../images/header_bg-sm.jpg');
 	}
 
 	@media (min-width: em(400)) {
 		background-image:
 			$tint-gradient,
-			url('/images/header_bg-me.jpg');
+			url('../images/header_bg-me.jpg');
 	}
 
 	@media (min-width: em(600)) {
 		background-image:
 			$tint-gradient,
-			url('/images/header_bg-la.jpg');
+			url('../images/header_bg-la.jpg');
 	}
 
 	@media (min-width: em(800)) {
 		background-image:
 			$tint-gradient,
-			url('/images/header_bg-xl.jpg');
+			url('../images/header_bg-xl.jpg');
 	}
 }
 
