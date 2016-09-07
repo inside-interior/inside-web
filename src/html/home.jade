@@ -5,7 +5,16 @@ html.no-js(lang='en')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		meta(name='description', content='Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.')
 		meta(name='keywords' content='Inside Interior,Inside,interior,design,interior design,Surabaya,Indonesia,quality,high quality,cheap,affordable,architecture,furniture,service')
-		title Inside Interior
+
+		- var page_title = 'Inside Interior'
+		title=page_title
+
+		meta(property='og:title', content=page_title)
+		meta(property='og:type', content='website')
+		meta(property='og:url', content='http://www.insideinterior.net')
+		meta(property='og:image', content='http://insideinterior.net/images/projects/makassar/10-sq-me.jpg')
+		meta(property='og:description', content='Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.')
+		meta(property='og:site_name', content='Inside Interior')
 
 		script(type='text/javascript', src='/js/inline-head.js')
 		link(rel='stylesheet', href='css/home.css')
