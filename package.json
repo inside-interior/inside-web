@@ -27,7 +27,7 @@
     "watch:images": "onchange 'src/images/**/*.*' -- npm run build:images",
     "watch:favicon": "onchange 'src/favicons/**/*.*' -- npm run build:favicon",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:font' 'npm run watch:js' 'npm run watch:inline-js' 'npm run watch:images' 'npm run watch:favicon'",
-    "build": "rm -rf ./dist/*/ && npm run build:all && npm run watch:all"
+    "build": "rm -rf ./dist && npm run build:all && echo insideinterior.net > dist/CNAME && npm run watch:all"
   },
   "author": "Sutrisno Suryajaya",
   "license": "ISC",
