@@ -27,7 +27,7 @@
     "watch:images": "onchange 'src/images/**/*.*' -- npm run build:images",
     "watch:favicon": "onchange 'src/favicons/**/*.*' -- npm run build:favicon",
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:font' 'npm run watch:js' 'npm run watch:inline-js' 'npm run watch:images' 'npm run watch:favicon'",
-    "build": "rm -rf ./dist && npm run build:all && echo insideinterior.net > dist/CNAME && npm run watch:all",
+    "build": "rm -rf ./dist && npm run build:all && echo insideinterior.net > dist/CNAME && cp src/robots.txt dist/robots.txt && npm run watch:all",
     "deploy": "git checkout master && git subtree split --prefix dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "author": "Sutrisno Suryajaya",
