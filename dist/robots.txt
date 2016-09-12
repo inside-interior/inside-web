@@ -1,4 +1,5 @@
 User-Agent: *
+Sitemap: https://insideinterior.net/sitemap.xml
 Disallow: /makassar/
 Disallow: /taman-international-1/
 Disallow: /taman-international-2/
