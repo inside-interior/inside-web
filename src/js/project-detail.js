@@ -7,12 +7,16 @@ var
 
 window.is_external_js_loaded = true;
 
-if (document.readyState !== 'uninitialized' || document.readyState !== 'loading') {
-	// DOM already loaded, i.e. too late to add event listener
-	onDOMLoaded();
+// Source: JQuery - https://github.com/jquery/jquery/blob/master/src/core/ready.js
+if (
+		document.readyState === 'complete' ||
+		(document.readyState !== 'loading' && !document.documentElement.doScroll)
+) {
+	window.setTimeout(onDOMLoaded);
 }
 else {
 	document.addEventListener('DOMContentLoaded', onDOMLoaded);
+	window.addEventListener('load', onDOMLoaded);
 }
 
 function onDOMLoaded() {
