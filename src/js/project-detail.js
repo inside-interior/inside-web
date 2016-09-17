@@ -22,6 +22,7 @@ else {
 function onDOMLoaded() {
 	var
 		html         = document.documentElement,
+		lang         = html.lang,
 		body         = document.body,
 		screen_width = window.innerWidth || html.clientWidth || body.clientWidth;
 
@@ -89,7 +90,7 @@ function onDOMLoaded() {
 	}
 
 	function openMenu() {
-		menu_btn.innerHTML = 'close';
+		menu_btn.innerHTML = lang === 'id' ? 'tutup' : 'close';
 		body.classList.add(MENU_OPEN_CLASS_NAME);
 
 		is_menu_open = !is_menu_open;

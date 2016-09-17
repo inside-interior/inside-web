@@ -1,0 +1,48 @@
+{
+	"head": {
+		"description" : "Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.",
+		"title-home"  : "Inside Interior | Interior Design Firm Surabaya"
+	},
+	"nav": {
+		"about"     : "About",
+		"expertise" : "Expertise",
+		"projects"  : "Projects",
+		"contact"   : "Contact"
+	},
+	"about": {
+		"title"   : "About Us",
+		"content" : "Inside Interior is a interior design firm based in Surabaya, Indonesia. Inside Interior was established in 2014 by two co-founders whose ambition is to design and create beautiful space. Both of us are honourable alumni of Petra Christian University. With our architectural background, we provide services varying from interior design, furniture contractor and architectural design. Inside Interior has grown rapidly along with the increasing demand on high quality yet affordable interior services. Our passionate team is always ready to bring your wildest dream alive."
+	},
+	"expertise": {
+		"title"  : "Expertise",
+		"item_1" : {
+			"title": "Interior Design",
+			"detail": "A few consultations will be needed to fulfill your needs of interior design. And combined with our experience, Inside Interior will deliver the finest design for you."
+		},
+		"item_2" : {
+			"title": "Furniture Manufacture",
+			"detail": "Beauty is perfection. Beside designing your dream, we have commited to make it true. Therefore, our professional team will be in charge during preparation, manufacturing until finishing process. Inside Interior will make sure every single furniture is immaculate both in design and quality."
+		},
+		"item_3" : {
+			"title": "Architecture",
+			"detail": "Home is where the heart is. It is our passion to design not only house, but home for our clients. With our modern style, we  make the best design that suits both the resident's preference and the environment."
+		}
+	},
+	"projects": {
+		"title"    : "Projects",
+		"category" : {
+			"house"     : "House",
+			"apartment" : "Apartment",
+			"retail"    : "Retail"
+		}
+	},
+	"contact": {
+		"title"    : "Contact",
+		"subtitle" : "We would love to hear from you!",
+		"province" : "East Java"
+	},
+	"project": {
+		"next" : "Next Project",
+		"prev" : "Previous Project"
+	}
+}

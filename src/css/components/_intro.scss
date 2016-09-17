@@ -132,3 +132,44 @@
 		letter-spacing: rem(3.2);
 	}
 }
+
+.intro__lang {
+	opacity: 0.5;
+
+	font-size: rem(18);
+	font-weight: bold;
+
+	position: absolute;
+	bottom: rem(24);
+	left: 50%;
+
+	transform: translateX(-50%);
+
+	@media (min-width: em(752)) {
+		bottom: rem(40);
+	}
+}
+
+.lang__link {
+	color: $tc-light;
+	transition: color 0.25s;
+
+	position: relative;
+
+	&:not(.is-current):hover {
+		color: $tc-brand;
+	}
+
+	&.is-current {
+		cursor: default;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 1.1em;
+			width: 100%;
+			height: 1px;
+			background: currentColor;
+		}
+	}
+}

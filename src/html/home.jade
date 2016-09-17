@@ -1,34 +1,34 @@
 doctype html
-html.no-js(lang='en')
+html.no-js
 	head
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		meta(name='description', content='Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.')
+		meta(name='description', data-i18n='head.description', data-i18n-attr='content')
 
-		- var page_title = 'Inside Interior | Interior Design Firm Surabaya'
-		title=page_title
+		- var page_title = 'head.title-home'
+		title(data-i18n=page_title)
 
 		meta(property='og:title', content=page_title)
 		meta(property='og:type', content='website')
 		meta(property='og:url', content='http://www.insideinterior.net')
 		meta(property='og:image', content='http://insideinterior.net/images/projects/makassar/10-sq-me.jpg')
-		meta(property='og:description', content='Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.')
+		meta(property='og:description', data-i18n='head.description', data-i18n-attr='content')
 		meta(property='og:site_name', content='Inside Interior')
 
 		script(type='text/javascript', src='/js/inline-head.js')
-		link(rel='stylesheet', href='css/home.css')
+		link(rel='stylesheet', href='css/home.css', data-i18n-link='href')
 
-		link(rel='preload', href='font/axis.woff2', as='font', type='font/woff2', crossorigin)
-		link(rel='preload', href='font/ProximaNova.woff2', as='font', type='font/woff2', crossorigin)
+		link(rel='preload', href='font/axis.woff2', as='font', type='font/woff2', crossorigin, data-i18n-link='href')
+		link(rel='preload', href='font/ProximaNova.woff2', as='font', type='font/woff2', crossorigin, data-i18n-link='href')
 		noscript
-			link(rel='stylesheet', href='css/font.css')
-		script(type='text/javascript', src='js/home.js', async='')
+			link(rel='stylesheet', href='css/font.css', data-i18n-link='href')
+		script(type='text/javascript', src='js/home.js', async='', data-i18n-link='src')
 
-		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
-		link(rel='icon', type='image/png', href='favicon-32x32.png', sizes='32x32')
-		link(rel='icon', type='image/png', href='favicon-16x16.png', sizes='16x16')
-		link(rel='manifest', href='manifest.json')
-		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#5bbad5')
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png', data-i18n-link='href')
+		link(rel='icon', type='image/png', href='favicon-32x32.png', sizes='32x32', data-i18n-link='href')
+		link(rel='icon', type='image/png', href='favicon-16x16.png', sizes='16x16', data-i18n-link='href')
+		link(rel='manifest', href='manifest.json', data-i18n-link='href')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#5bbad5', data-i18n-link='href')
 		meta(name='theme-color', content='#ffffff')
 
 	body(itemscope='', itemtype='https://schema.org/LocalBusiness')
@@ -36,57 +36,60 @@ html.no-js(lang='en')
 		span.menu-btn.js-menu-btn menu
 		nav.nav.js-nav
 			.nav__links
-				a.nav__links__link.js-nav-link(data-scroll='', href='#about') About
-				a.nav__links__link.js-nav-link(data-scroll='', href='#expertise') Expertise
-				a.nav__links__link.js-nav-link(data-scroll='', href='#projects') Projects
-				a.nav__links__link.js-nav-link(data-scroll='', href='#contact') Contact
+				a.nav__links__link.js-nav-link(data-scroll='', href='#about', data-i18n='nav.about')
+				a.nav__links__link.js-nav-link(data-scroll='', href='#expertise', data-i18n='nav.expertise')
+				a.nav__links__link.js-nav-link(data-scroll='', href='#projects', data-i18n='nav.projects')
+				a.nav__links__link.js-nav-link(data-scroll='', href='#contact', data-i18n='nav.contact')
 			p.nav__copyright='© 2016 '
 				span(itemprop='name') Inside Interior
 		main
 			header.intro.js-intro
 				svg.intro__logo
-					use(xlink:href='images/icons.svg#inside_logo', itemprop='logo')
+					use(xlink:href='images/icons.svg#inside_logo', itemprop='logo', data-i18n-link='xlink:href')
 				.intro__intro
 					h1.intro__title Inside
 					h2.intro__tagline Where design comes alive
+				.intro__lang
+					a(href='/', class='lang__link lang__link--id') ID
+					&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+					a(href='/en', class='lang__link lang__link--en') EN
 			section#about.section
 				.section__content
-					h2.section__title.js-section-title About Us
-					p.about__content.js-about-us(itemprop='description')
-						| Inside Interior is a interior design firm based in Surabaya, Indonesia. Inside Interior was established in 2014 by two co-founders whose ambition is to design and create beautiful space. Both of us are honourable alumni of Petra Christian University. With our architectural background, we provide services varying from interior design, furniture contractor and architectural design. Inside Interior has grown rapidly along with the increasing demand on high quality yet affordable interior services. Our passionate team is always ready to bring your wildest dream alive.
+					h2.section__title.js-section-title(data-i18n='about.title')
+					p.about__content.js-about-us(itemprop='description', data-i18n='about.content')
 			-
 				var expertises = [
 					{
-						title  : 'Interior Design',
-						detail : 'A few consultations will be needed to fulfill your needs of interior design. And combined with our experience, Inside Interior will deliver the finest design for you.'
+						title  : 'expertise.item_1.title',
+						detail : 'expertise.item_1.detail'
 					},
 					{
-						title  : 'Furniture Manufacture',
-						detail : 'Beauty is perfection. Beside designing your dream, we have commited to make it true. Therefore, our professional team will be in charge during preparation, manufacturing until finishing process. Inside Interior will make sure every single furniture is immaculate both in design and quality.'
+						title  : 'expertise.item_2.title',
+						detail : 'expertise.item_2.detail'
 					},
 					{
-						title  : 'Architecture',
-						detail : 'Home is where the heart is. It is our passion to design not only house, but home for our clients. With our modern style, we  make the best design that suits both the resident\'s preference and the environment.'
+						title  : 'expertise.item_3.title',
+						detail : 'expertise.item_3.detail'
 					}
 				]
 			section#expertise.section
 				.section__content
-					h2.section__title.js-section-title Expertise
+					h2.section__title.js-section-title(data-i18n='expertise.title')
 					ul.expertises
 						each expertise, index in expertises
 							li.expertise-wrapper.js-expertise(class= index == 0 ? 'js-last-hover' : '')
 								.expertise
-									h3.expertise__title= expertise.title
-									p.expertise__detail= expertise.detail
+									h3.expertise__title(data-i18n=expertise.title)
+									p.expertise__detail(data-i18n=expertise.detail)
 			section#projects.section.section--projects
 				.section__content
-					h2.section__title.js-section-title Projects
+					h2.section__title.js-section-title(data-i18n='projects.title')
 					each projects in locals
-						h3.projects-category.js-project-category= projects.category
+						h3.projects-category.js-project-category(data-i18n=projects.category)
 						ul.projects.js-projects
 							each project in projects.projects
 								li.project-wrapper.js-project
-									a(href='./' + project.permalink)
+									a(href=project.permalink)
 										- var img_src = 'images/projects/' + project.permalink + '/' + project.homepage_img
 
 										- var srcset_str = img_src + '-sq-xs.jpg 175w,'
@@ -103,23 +106,25 @@ html.no-js(lang='en')
 											img.project__img.lazyload(data-srcset=srcset_str,
 											                          data-sizes='auto',
 											                          data-src=img_src + '-sq-me.jpg',
-											                          alt=project.title)
+											                          alt=project.title,
+											                          data-i18n-link='data-srcset,data-src')
 											figcaption.project__title= project.title
 										noscript
 											figure.project
 												img.project__img(srcset=srcset_str,
 												                 sizes=sizes_str,
 												                 src=img_src + '-sq-me.jpg',
-												                 alt=project.title)
+												                 alt=project.title,
+												                 data-i18n-link='srcset,src')
 												figcaption.project__title= project.title
 			section#contact.section
 				.section__content
-					h2.section__title.js-section-title Contact
-					p.contact-greet.js-contact-greet We would love to hear from you!
+					h2.section__title.js-section-title(data-i18n='contact.title')
+					p.contact-greet.js-contact-greet(data-i18n='contact.subtitle')
 					.contacts
 						.contact.js-contact
 							svg.contact__logo
-								use(xlink:href='images/icons.svg#phone')
+								use(xlink:href='images/icons.svg#phone', data-i18n-link='xlink:href')
 							.contact__content
 								a.contact__link(href='tel:+6281-251-220-220', itemprop='telephone') +6281-251-220-220
 								p.contact__name(itemprop='founder') Agung Suryajaya Putra S. T.
@@ -127,20 +132,20 @@ html.no-js(lang='en')
 								p.contact__name(itemprop='founder') Randy Eka Pranoto S. T.
 						.contact.js-contact
 							svg.contact__logo
-								use(xlink:href='images/icons.svg#pinpoint')
+								use(xlink:href='images/icons.svg#pinpoint', data-i18n-link='xlink:href')
 							.contact__content(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
 								p.contact__detail(itemprop='streetAddress') Jl. Raya Kuwukan No. 107 Kav. 4-5
 								p.contact__sub-detail
 									span(itemprop='addressLocality') Surabaya
 									&#44;&nbsp;
-									span(itemprop='addressRegion') East Java
+									span(itemprop='addressRegion', data-i18n='contact.province')
 									&#44;&nbsp;
 									span(itemprop='addressCountry') Indonesia
 									&#44;&nbsp;
 									span(itemprop='postalCode') 60217
 						.contact.js-contact
 							svg.contact__logo
-								use(xlink:href='images/icons.svg#mail')
+								use(xlink:href='images/icons.svg#mail', data-i18n-link='xlink:href')
 							.contact__content
 								a.contact__link(href='mailto:inside.interior@hotmail.com', itemprop='email') inside.interior@hotmail.com
 						div(itemprop='geo', itemscope='', itemtype='http://schema.org/GeoCoordinates')
@@ -150,9 +155,9 @@ html.no-js(lang='en')
 			.footer__logo-wrapper
 				a.footer__soc-med-link(href='https://www.instagram.com/inside.interior/', target='_blank')
 					svg.footer__soc-med-logo
-						use(xlink:href='images/icons.svg#instagram')
+						use(xlink:href='images/icons.svg#instagram', data-i18n-link='xlink:href')
 				a.footer__soc-med-link(href='https://www.facebook.com/InsideStudioDesign', target='_blank')
 					svg.footer__soc-med-logo
-						use(xlink:href='images/icons.svg#fb')
+						use(xlink:href='images/icons.svg#fb', data-i18n-link='xlink:href')
 			p.footer__copyright © 2016 Inside Interior. All rights reserved.
 		script(type='text/javascript', src='/js/inline-body.js')

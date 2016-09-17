@@ -62,3 +62,12 @@ function getIEVersion() {
 	// other browser
 	return false;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	var
+		lang         = html.lang,
+		lang_link_el = document.getElementsByClassName('lang__link--' + lang)[0];
+
+	lang_link_el && lang_link_el.classList.add('is-current');
+	lang_link_el && lang_link_el.removeAttribute('href');;
+});
