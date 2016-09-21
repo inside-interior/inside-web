@@ -17,7 +17,7 @@ $total-rad: ($transparent-border-sz/2) + $vivid-border-sz;
 	background-color: $c-brand-dark;
 
 	position: fixed;
-	top: rem(24);
+	bottom: 100%;
 	right: rem(24);
 	z-index: $z-menu-btn;
 
@@ -35,16 +35,18 @@ $total-rad: ($transparent-border-sz/2) + $vivid-border-sz;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-	transform: translateY(-200%);
 	transition: transform 0.6s;
 
 	.scroll-up & {
-		transform: translateY(0);
+		transform: translateY($btn-transparent-rad + $vivid-border-sz * 2 + rem(24));
 	}
 
 	@media (min-width: em(752)) {
-		top: rem(40);
 		right: rem(40);
+
+		.scroll-up & {
+			transform: translateY($btn-transparent-rad + $vivid-border-sz * 2 + rem(40));
+		}
 	}
 }
 
