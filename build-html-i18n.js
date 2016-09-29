@@ -11,6 +11,7 @@ var
 	I18N_ATTR_TEXT = 'data-i18n',
 	I18N_ATTR_ATTR = 'data-i18n-attr',
 	I18N_ATTR_LINK = 'data-i18n-link',
+	i18n_attr_attr_list_multi_lang = [], // for supporting different attribute value according to the language
 
 	html_files = [],
 
@@ -26,6 +27,8 @@ var locales_to_be_translated = i18n_config.locales.concat(i18n_config.default);
 
 locales_to_be_translated.forEach(function(locale, idx) {
 	var compile_to_root = idx === locales_to_be_translated.length - 1;
+
+	i18n_attr_attr_list_multi_lang.push(I18N_ATTR_TEXT + '-' + locale);
 
 	compile(locale, DIST_DIR, compile_to_root);
 });
@@ -76,6 +79,21 @@ function compile(locale, dist_dir, save_at_root) {
 				}
 
 				$(elem).removeAttr(I18N_ATTR_TEXT);
+			});
+
+			// Replacing I18N_ATTR_ATTR that has different value for different language
+			var selector_str = '[' + i18n_attr_attr_list_multi_lang.join('][') + ']';
+			$('html').find(selector_str).each(function(idx, elem) {
+				var
+					attr_name = $(elem).attr(I18N_ATTR_ATTR),
+					attr_val  = $(elem).attr(I18N_ATTR_TEXT + '-' + locale);
+
+				$(elem).attr(attr_name, attr_val);
+
+				i18n_attr_attr_list_multi_lang.forEach(function(attr_name_multi_lang) {
+					$(elem).removeAttr(attr_name_multi_lang);
+				})
+				$(elem).removeAttr(I18N_ATTR_ATTR);
 			});
 
 			// Replacing I18N_ATTR_LINK
