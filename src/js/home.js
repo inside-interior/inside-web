@@ -6,15 +6,11 @@ var
 
 	scroll_reveal;
 
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.expand = 888;
+
 require('svg4everybody')();
 require('lazysizes');
-
-// body.classList.add('loading');
-
-// // wait until all assets is downloaded
-// window.onload = function() {
-// 	body.classList.remove('loading');
-// }
 
 window.is_external_js_loaded = true;
 
