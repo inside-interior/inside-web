@@ -23,7 +23,6 @@ if (
 }
 else {
 	document.addEventListener('DOMContentLoaded', onDOMLoaded);
-	window.addEventListener('load', onDOMLoaded);
 }
 
 function onDOMLoaded() {
