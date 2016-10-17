@@ -134,7 +134,7 @@
 }
 
 .intro__lang {
-	opacity: 0.5;
+	opacity: 0.75;
 
 	font-size: rem(18);
 	font-weight: bold;
@@ -145,31 +145,48 @@
 
 	transform: translateX(-50%);
 
+	transition: opacity 0.5s;
+
+	&:hover {
+		opacity: 1;
+	}
+
 	@media (min-width: em(752)) {
 		bottom: rem(40);
 	}
 }
 
 .lang__link {
-	color: $tc-light;
-	transition: color 0.25s;
+	display: inline-block;
 
-	position: relative;
-
-	&:not(.is-current):hover {
-		color: $tc-brand;
-	}
+	vertical-align: middle;
 
 	&.is-current {
 		cursor: default;
+	}
+}
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 1.1em;
-			width: 100%;
-			height: 1px;
-			background: currentColor;
-		}
+.lang__separator {
+	vertical-align: middle;
+
+	margin: 0 rem(16);
+}
+
+$lang_icon_width: 28;
+
+.lang__icon {
+	width: rem($lang_icon_width);
+	height: rem(3 / 4 * $lang_icon_width);
+
+	filter: grayscale(100%);
+
+	transition: filter 0.5s;
+
+	.lang__link:not(.is-current):hover & {
+		filter: none;
+	}
+
+	.lang__link.is-current & {
+		filter: none;
 	}
 }

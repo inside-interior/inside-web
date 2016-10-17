@@ -55,9 +55,13 @@ html.no-js
 					h1.intro__title Inside
 					h2.intro__tagline Where design comes alive
 				.intro__lang
-					a(href='/', class='lang__link lang__link--id') ID
-					&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-					a(href='/en', class='lang__link lang__link--en') EN
+					a(href='/', class='lang__link lang__link--id', aria-label='Bahasa Indonesia', title='Bahasa Indonesia')
+						svg(class='lang__icon')
+							use(xlink:href='images/icons.svg#flag_id', data-i18n-link='xlink:href')
+					span.lang__separator |
+					a(href='/en', class='lang__link lang__link--en', aria-label='English', title='English')
+						svg(class='lang__icon')
+							use(xlink:href='images/icons.svg#flag_us', data-i18n-link='xlink:href')
 			section#about.section
 				.section__content
 					h2.section__title.js-section-title(data-i18n='about.title')
