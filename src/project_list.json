@@ -4,7 +4,7 @@
 		"projects" : [
 			{
 				"title"        : "House in Makassar",
-				"detail"       : "Master bedrom, walk-in closet, kitchen, living room",
+				"detail"       : "Master bedroom, walk-in closet, kitchen, living room",
 				"homepage_img" : "10",
 				"images"       : ["10", "11", "20", "21", "30", "31", "40"],
 				"permalink"    : "makassar"

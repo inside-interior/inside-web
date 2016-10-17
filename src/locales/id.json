@@ -1,31 +1,31 @@
 {
 	"head": {
-		"description" : "Inside Interior adalah perusahaan desain interior yang berbasis di Surabaya, Indonesia. Kami memberikan kualitas tinggi namun layanan yang terjangkau bervariasi dari desain interior, kontraktor furniture dan desain arsitektur.",
-		"title-home"  : "Inside Interior | Interior Design Surabaya"
+		"description" : "Inside Interior adalah perusahaan desain interior yang berpusat di Surabaya. Kami menyediakan jasa interior berkualitas dengan harga yang terjangkau; mulai dari desain interior, pembuatan furnitur dan desain arsitektur.",
+		"title-home"  : "Inside Interior | Desain Interior Surabaya"
 	},
 	"nav": {
-		"about"     : "Profil",
+		"about"     : "Tentang Kami",
 		"expertise" : "Keahlian",
 		"projects"  : "Proyek",
 		"contact"   : "Kontak"
 	},
 	"about": {
-		"title"   : "Profil",
-		"content" : "Inside Interior adalah perusahaan desain interior yang berbasis di Surabaya, Indonesia. Di dalam Interior didirikan pada tahun 2014 oleh dua co-pendiri yang berambisi untuk merancang dan menciptakan ruang yang indah. Kami berdua alumni terhormat Universitas Kristen Petra. Dengan latar belakang arsitektur kami, kami menyediakan layanan bervariasi dari desain interior, kontraktor furniture dan desain arsitektur. Di dalam Interior telah berkembang pesat seiring dengan meningkatnya permintaan pada kualitas tinggi layanan interior namun terjangkau. Tim bergairah kami selalu siap untuk membawa impian terliar Anda hidup."
+		"title"   : "Tentang Kami",
+		"content" : "Inside Interior adalah perusahaan desain interior yang berpusat di Surabaya. Inside Interior didirikan pada tahun 2014 oleh dua desainer muda dengan ambisi untuk mendesain dan menciptakan keindahan. Keduanya merupakan alumnus Universitas Kristen Petra. Dengan latar belakang arsitektur, kami menyediakan jasa desain interior, pembuatan furnitur dan desain arsitektur. Inside Interior selalu menghadirkan jasa interior berkualitas dengan harga terjangkau. Tim kami selalu siap untuk mewujudkan interior impian Anda."
 	},
 	"expertise": {
 		"title"  : "Keahlian",
 		"item_1" : {
 			"title": "Desain Interior",
-			"detail": "Beberapa konsultasi akan diperlukan untuk memenuhi kebutuhan Anda dari desain interior. Dan dikombinasikan dengan pengalaman kami, dalam Interior akan memberikan desain terbaik untuk Anda."
+			"detail": "Beberapa konsultasi diperlukan agar tim kami dapat memahami interior impian Anda. Dikombinasikan dengan pengalaman kami, Inside Interior akan menghadirkan desain terbaik untuk Anda."
 		},
 		"item_2" : {
-			"title": "Manufaktur Furnitur",
-			"detail": "Kecantikan adalah kesempurnaan. Di samping merancang impian Anda, kami telah berkomitmen untuk membuatnya benar. Oleh karena itu, tim profesional kami akan bertanggung jawab selama persiapan, pembuatan sampai proses finishing. Inside Interior akan memastikan setiap furniture tunggal rapi baik dalam desain dan kualitas."
+			"title": "Pembuatan Furnitur",
+			"detail": "Selain mendesain impian Anda, kami juga berkomitmen untuk mewujudkannya. Maka dari itu, tim ahli kami akan terjun langsung sejak konsultasi awal, produksi, hingga proses finishing. Inside Interior akan memastikan tiap furnitur Anda sempurna, baik desain maupun kualitasnya."
 		},
 		"item_3" : {
 			"title": "Arsitektur",
-			"detail": "Rumah adalah tempat hati berada. Ini adalah semangat kami untuk merancang tidak hanya rumah, tapi rumah untuk klien kami. Dengan gaya modern, kami membuat desain terbaik yang sesuai baik preferensi warga dan lingkungan."
+			"detail": "Keinginan kami adalah mendesain hunian yang estetik dan nyaman. Dengan gaya modern, kami menciptakan desain yang sesuai dengan kebutuhan Anda dan lingkungan sekitar."
 		}
 	},
 	"projects": {
@@ -38,11 +38,11 @@
 	},
 	"contact": {
 		"title"    : "Kontak",
-		"subtitle" : "Kami akan sangat senang mendengar dari Anda!",
+		"subtitle" : "Kami sangat senang untuk mendengar interior impian Anda!",
 		"province" : "Jawa Timur"
 	},
 	"project": {
-		"next" : "Proyek Berikutnya",
+		"next" : "Proyek Selanjutnya",
 		"prev" : "Proyek Sebelumnya"
 	}
 }
