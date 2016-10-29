@@ -32,11 +32,9 @@
 .section__title {
 	display: inline-block;
 
-	padding: 0 rem(24);
+	padding: rem(12) rem(24);
 	margin-bottom: rem(32);
 	border: em(5,30) solid currentColor;
-
-	line-height: 1.5;
 
 	.js:not(.external-js-timeout) & {
 		visibility: hidden;
