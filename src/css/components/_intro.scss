@@ -17,6 +17,15 @@
 	                    rgba(0, 0, 0, 0.7)
 	                );
 
+	$mock-gradient: linear-gradient(
+	                    #424847 0%,
+	                    #575650 8.5%,
+	                    #8e7c73 29.5%,
+	                    #b9bdbd 51.5%,
+	                    #c0cdd1 71%,
+	                    #98a2ab 100%
+	                ); // Gradient similar to the header_bg image
+
 	height: rem(640); // Fallback
 	height: 100vh;
 
@@ -36,25 +45,29 @@
 	@media (min-width: em(200)) {
 		background-image:
 			$tint-gradient,
-			url('../images/header_bg-sm.jpg');
+			url('../images/header_bg-sm.jpg'),
+			$mock-gradient;
 	}
 
 	@media (min-width: em(400)) {
 		background-image:
 			$tint-gradient,
-			url('../images/header_bg-me.jpg');
+			url('../images/header_bg-me.jpg'),
+			$mock-gradient;
 	}
 
 	@media (min-width: em(600)) {
 		background-image:
 			$tint-gradient,
-			url('../images/header_bg-la.jpg');
+			url('../images/header_bg-la.jpg'),
+			$mock-gradient;
 	}
 
 	@media (min-width: em(800)) {
 		background-image:
 			$tint-gradient,
-			url('../images/header_bg-xl.jpg');
+			url('../images/header_bg-xl.jpg'),
+			$mock-gradient;
 	}
 }
 
