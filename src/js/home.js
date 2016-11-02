@@ -53,7 +53,7 @@ function onDOMLoaded() {
 		var
 			intro_el         = document.getElementsByClassName('js-intro')[0],
 			style            = intro_el.currentStyle || window.getComputedStyle(intro_el, false),
-			intro_bg_src     = /url\((.*)\)/.exec(style.backgroundImage)[1].replace(/('|")/g, ''),
+			intro_bg_src     = /url\(('|")(.*)('|")\)/.exec(style.backgroundImage)[2],
 			intro_bg_img     = new Image(),
 			is_bg_img_loaded = false;
 
