@@ -15,7 +15,7 @@
   <xhtml:link
     rel="alternate"
     hreflang="en"
-    href="http://insideinterior.net/en/"
+    href="https://insideinterior.net/en/"
   />
   <xhtml:link
     rel="alternate"
@@ -25,7 +25,7 @@
 </url>
 
 <url>
-  <loc>http://insideinterior.net/en/</loc>
+  <loc>https://insideinterior.net/en/</loc>
   <lastmod>2016-09-30T13:30:19+00:00</lastmod>
   <changefreq>monthly</changefreq>
   <priority>1</priority>
@@ -37,7 +37,7 @@
   <xhtml:link
     rel="alternate"
     hreflang="en"
-    href="http://insideinterior.net/en/"
+    href="https://insideinterior.net/en/"
   />
 </url>
 </urlset>
