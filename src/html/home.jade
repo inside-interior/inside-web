@@ -36,7 +36,99 @@ html.no-js
 		link(rel='alternate', hreflang='id', href='https://insideinterior.net/')
 		link(rel='alternate', hreflang='x-default', href='https://insideinterior.net/en/')
 
-	body(itemscope='', itemtype='https://schema.org/LocalBusiness')
+		-
+			var ld_json = {
+				"@context": "http://schema.org",
+				"@type": "LocalBusiness",
+				"url": "{{ld_json.url}}",
+				"name": "Inside Interior",
+				"logo": "https://insideinterior.net/images/inside_logo.png",
+				"image": "https://insideinterior.net/images/inside_logo.png",
+				"description": "{{about.content}}",
+				"email": "inside.interior@hotmail.com",
+				"location": {
+					"@type": "Place",
+					"address": {
+						"@type": "PostalAddress",
+						"addressCountry": "Indonesia",
+						"addressLocality": "Surabaya",
+						"addressRegion": "{{contact.province}}",
+						"streetAddress": "Jl. Raya Kuwukan No. 107 Kav. 4-5",
+						"postalCode": "60217"
+					},
+					"geo": {
+						"@type": "GeoCoordinates",
+						"latitude": "-7.272737",
+						"longitude": "112.659813"
+					},
+				},
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "Indonesia",
+					"addressLocality": "Surabaya",
+					"addressRegion": "{{contact.province}}",
+					"streetAddress": "Jl. Raya Kuwukan No. 107 Kav. 4-5",
+					"postalCode": "60217"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": "-7.272737",
+					"longitude": "112.659813"
+				},
+				"telephone": "+6281-251-220-220",
+				"makesOffer": [
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "{{expertise.item_1.title}}",
+							"description": "{{expertise.item_1.detail}}",
+							"serviceType": "{{expertise.item_1.title}}",
+							"serviceOutput": "{{expertise.item_1.service_output}}"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "{{expertise.item_2.title}}",
+							"description": "{{expertise.item_2.detail}}",
+							"serviceType": "{{expertise.item_2.title}}",
+							"serviceOutput": "{{expertise.item_2.service_output}}"
+						}
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": {
+							"@type": "Service",
+							"name": "{{expertise.item_3.title}}",
+							"description": "{{expertise.item_3.detail}}",
+							"serviceType": "{{expertise.item_3.title}}",
+							"serviceOutput": "{{expertise.item_3.service_output}}"
+						}
+					}
+				],
+				"contactPoint": [
+				 	{
+						"@type": "ContactPoint",
+						"telephone": "+6281-251-220-220",
+						"contactType": "customer service"
+					},
+					{
+						"@type": "ContactPoint",
+						"telephone": "+6285-236-727-777",
+						"contactType": "customer service"
+					}
+				],
+				"founders": [
+					"Agung Suryajaya Putra S. T.",
+					"Randy Eka Pranoto S. T."
+				]
+			}
+
+		script(type='application/ld+json') !{JSON.stringify(ld_json)}
+
+	body
 		// section.loading-page Loading ...
 		span.menu-btn.js-menu-btn menu
 		nav.nav.js-nav
@@ -46,11 +138,11 @@ html.no-js
 				a.nav__links__link.js-nav-link(data-scroll='', href='#projects', data-i18n='nav.projects')
 				a.nav__links__link.js-nav-link(data-scroll='', href='#contact', data-i18n='nav.contact')
 			p.nav__copyright='© 2016 '
-				span(itemprop='name') Inside Interior
+				span Inside Interior
 		main
 			header.intro.js-intro
 				svg.intro__logo
-					use(xlink:href='images/icons.svg#inside_logo', itemprop='logo', data-i18n-link='xlink:href')
+					use(xlink:href='images/icons.svg#inside_logo', data-i18n-link='xlink:href')
 				.intro__intro
 					h1.intro__title Inside
 					h2.intro__tagline Where design comes alive
@@ -65,7 +157,7 @@ html.no-js
 			section#about.section
 				.section__content
 					h2.section__title.js-section-title(data-i18n='about.title')
-					p.about__content.js-about-us(itemprop='description', data-i18n='about.content')
+					p.about__content.js-about-us(data-i18n='about.content')
 			-
 				var expertises = [
 					{
@@ -135,31 +227,24 @@ html.no-js
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#phone', data-i18n-link='xlink:href')
 							.contact__content
-								a.contact__link(href='tel:+6281-251-220-220', itemprop='telephone') +6281-251-220-220
-								p.contact__name(itemprop='founder') Agung Suryajaya Putra S. T.
-								a.contact__link(href='tel:+6285-236-727-777', itemprop='telephone') +6285-236-727-777
-								p.contact__name(itemprop='founder') Randy Eka Pranoto S. T.
+								a.contact__link(href='tel:+6281-251-220-220') +6281-251-220-220
+								p.contact__name Agung Suryajaya Putra S. T.
+								a.contact__link(href='tel:+6285-236-727-777') +6285-236-727-777
+								p.contact__name Randy Eka Pranoto S. T.
 						.contact.js-contact
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#pinpoint', data-i18n-link='xlink:href')
-							.contact__content(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
-								p.contact__detail(itemprop='streetAddress') Jl. Raya Kuwukan No. 107 Kav. 4-5
+							.contact__content
+								p.contact__detail Jl. Raya Kuwukan No. 107 Kav. 4-5
 								p.contact__sub-detail
-									span(itemprop='addressLocality') Surabaya
-									&#44;&nbsp;
-									span(itemprop='addressRegion', data-i18n='contact.province')
-									&#44;&nbsp;
-									span(itemprop='addressCountry') Indonesia
-									&#44;&nbsp;
-									span(itemprop='postalCode') 60217
+									span='Surabaya, '
+									span(data-i18n='contact.province')
+									span=', Indonesia, 60217'
 						.contact.js-contact
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#mail', data-i18n-link='xlink:href')
 							.contact__content
-								a.contact__link(href='mailto:inside.interior@hotmail.com', itemprop='email') inside.interior@hotmail.com
-						div(itemprop='geo', itemscope='', itemtype='http://schema.org/GeoCoordinates')
-							meta(itemprop='latitude', content='-7.272737')
-							meta(itemprop='longitude', content='112.659813')
+								a.contact__link(href='mailto:inside.interior@hotmail.com') inside.interior@hotmail.com
 		footer.footer
 			.footer__logo-wrapper
 				a.footer__soc-med-link(href='https://www.instagram.com/inside.interior/', target='_blank')

@@ -16,7 +16,7 @@
     "build:css": "npm run scss && npm run autoprefixer",
     "build:font": "mkdir -p dist/font && cp -rf src/font dist",
     "build:js": "npm run lint && npm run browserify && npm run uglify",
-    "build:raster-images": "grunt responsive_images && node build-project-thumb-sprite.js && imagemin dist/images/ dist/images/ -p",
+    "build:raster-images": "grunt responsive_images && node build-project-thumb-sprite.js && imagemin dist/images/ dist/images/ -p && cp src/images/inside_logo.png dist/images/inside_logo.png",
     "build:images": "npm run build:raster-images && npm run icons",
     "build:favicon": "cp -a src/favicons/. dist",
     "build:all": "parallelshell 'npm run build:css' 'npm run build:font' 'npm run build:js && npm run build:html' 'npm run build:images' 'npm run build:favicon'",

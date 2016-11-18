@@ -1,4 +1,7 @@
 {
+	"ld_json": {
+		"url" : "https://insideinterior.net/en"
+	},
 	"head": {
 		"description" : "Inside Interior is a interior design firm based in Surabaya, Indonesia. We provide high quality yet affordable services varying from interior design, furniture contractor and architectural design.",
 		"title-home"  : "Inside Interior | Interior Design Firm Surabaya"
@@ -17,15 +20,18 @@
 		"title"  : "Expertise",
 		"item_1" : {
 			"title": "Interior Design",
-			"detail": "A few consultations will be needed to fulfill your needs of interior design. And combined with our experience, Inside Interior will deliver the finest design for you."
+			"detail": "A few consultations will be needed to fulfill your needs of interior design. And combined with our experience, Inside Interior will deliver the finest design for you.",
+			"service_output": "home interior design"
 		},
 		"item_2" : {
 			"title": "Furniture Manufacture",
-			"detail": "Beauty is perfection. Beside designing your dream, we have commited to make it true. Therefore, our professional team will be in charge during preparation, manufacturing until finishing process. Inside Interior will make sure every single furniture is immaculate both in design and quality."
+			"detail": "Beauty is perfection. Beside designing your dream, we have commited to make it true. Therefore, our professional team will be in charge during preparation, manufacturing until finishing process. Inside Interior will make sure every single furniture is immaculate both in design and quality.",
+			"service_output": "furniture"
 		},
 		"item_3" : {
 			"title": "Architecture",
-			"detail": "Home is where the heart is. It is our passion to design not only house, but home for our clients. With our modern style, we  make the best design that suits both the resident's preference and the environment."
+			"detail": "Home is where the heart is. It is our passion to design not only house, but home for our clients. With our modern style, we  make the best design that suits both the resident's preference and the environment.",
+			"service_output": "home and building architecture design"
 		}
 	},
 	"projects": {

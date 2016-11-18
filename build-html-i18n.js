@@ -118,6 +118,24 @@ function compile(locale, dist_dir, save_at_root) {
 				$(elem).removeAttr(I18N_ATTR_LINK);
 			});
 
+			// Replacing script(type="application/ld+json")
+			$('html').find('script').each(function(idx, elem) {
+				var
+					script_type = $(elem).attr('type'),
+
+					ld_json_str,
+					ld_json;
+
+				if (script_type === 'application/ld+json') {
+					ld_json_str = $(elem).text();
+					ld_json     = JSON.parse(ld_json_str);
+
+					recursiveJsonIteration(ld_json, strings_dict);
+
+					$(elem).text(JSON.stringify(ld_json));
+				}
+			});
+
 			var
 				dist_dir_absolute = path.resolve(dist_dir),
 				save_to           = dist_dir_absolute + '/',
@@ -134,6 +152,25 @@ function compile(locale, dist_dir, save_at_root) {
 	});
 }
 
+function recursiveJsonIteration(json, strings_dict) {
+	var key, val, string_key, string;
+
+	for (key in json) {
+		val = json[key];
+
+		if (isObject(val)) {
+			recursiveJsonIteration(val, strings_dict);
+		}
+		else {
+			string_key = /^\{\{([a-zA-Z0-9_\.]+)\}\}$/.exec(val);
+
+			if (string_key) {
+				json[key] = getValue(strings_dict, string_key[1]);
+			}
+		}
+	}
+}
+
 function getValue(obj, string_key) {
 	return string_key.split('.').reduce(index, obj);
 }
@@ -148,4 +185,8 @@ function writeFile(path, contents, cb) {
 
 		file_system.writeFile(path, contents, cb);
 	});
+}
+
+function isObject(item) {
+	return item !== null && typeof item === 'object';
 }

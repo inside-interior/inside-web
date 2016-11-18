@@ -1,4 +1,7 @@
 {
+	"ld_json": {
+		"url" : "https://insideinterior.net"
+	},
 	"head": {
 		"description" : "Inside Interior adalah perusahaan desain interior yang berpusat di Surabaya. Kami menyediakan jasa interior berkualitas dengan harga yang terjangkau; mulai dari desain interior, pembuatan furnitur dan desain arsitektur.",
 		"title-home"  : "Inside Interior | Desain Interior Surabaya"
@@ -17,15 +20,18 @@
 		"title"  : "Keahlian",
 		"item_1" : {
 			"title": "Desain Interior",
-			"detail": "Beberapa konsultasi diperlukan agar tim kami dapat memahami interior impian Anda. Dikombinasikan dengan pengalaman kami, Inside Interior akan menghadirkan desain terbaik untuk Anda."
+			"detail": "Beberapa konsultasi diperlukan agar tim kami dapat memahami interior impian Anda. Dikombinasikan dengan pengalaman kami, Inside Interior akan menghadirkan desain terbaik untuk Anda.",
+			"service_output": "desain interior rumah"
 		},
 		"item_2" : {
 			"title": "Pembuatan Furnitur",
-			"detail": "Selain mendesain impian Anda, kami juga berkomitmen untuk mewujudkannya. Maka dari itu, tim ahli kami akan terjun langsung sejak konsultasi awal, produksi, hingga proses finishing. Inside Interior akan memastikan tiap furnitur Anda sempurna, baik desain maupun kualitasnya."
+			"detail": "Selain mendesain impian Anda, kami juga berkomitmen untuk mewujudkannya. Maka dari itu, tim ahli kami akan terjun langsung sejak konsultasi awal, produksi, hingga proses finishing. Inside Interior akan memastikan tiap furnitur Anda sempurna, baik desain maupun kualitasnya.",
+			"service_output": "furnitur dan perabotan"
 		},
 		"item_3" : {
 			"title": "Arsitektur",
-			"detail": "Keinginan kami adalah mendesain hunian yang estetik dan nyaman. Dengan gaya modern, kami menciptakan desain yang sesuai dengan kebutuhan Anda dan lingkungan sekitar."
+			"detail": "Keinginan kami adalah mendesain hunian yang estetik dan nyaman. Dengan gaya modern, kami menciptakan desain yang sesuai dengan kebutuhan Anda dan lingkungan sekitar.",
+			"service_output": "desain arsitektur rumah dan bangunan"
 		}
 	},
 	"projects": {
