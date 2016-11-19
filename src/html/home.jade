@@ -46,34 +46,54 @@ html.no-js
 				"image": "https://insideinterior.net/images/inside_logo.png",
 				"description": "{{about.content}}",
 				"email": "inside.interior@hotmail.com",
-				"location": {
-					"@type": "Place",
-					"address": {
-						"@type": "PostalAddress",
-						"addressCountry": "Indonesia",
-						"addressLocality": "Surabaya",
-						"addressRegion": "{{contact.province}}",
-						"streetAddress": "Jl. Raya Kuwukan No. 107 Kav. 4-5",
-						"postalCode": "60217"
+				"location": [
+					{
+						"@type": "Place",
+						"name": "Workshop",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "Indonesia",
+							"addressLocality": "Surabaya",
+							"addressRegion": "{{contact.province}}",
+							"streetAddress": "Jl. Raya Kuwukan No. 107 Kav. 4-5",
+							"postalCode": "60217"
+						},
+						"geo": {
+							"@type": "GeoCoordinates",
+							"latitude": "-7.272737",
+							"longitude": "112.659813"
+						}
 					},
-					"geo": {
-						"@type": "GeoCoordinates",
-						"latitude": "-7.272737",
-						"longitude": "112.659813"
-					},
-				},
+					{
+						"@type": "Place",
+						"name": "{{contact.office}}",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "Indonesia",
+							"addressLocality": "Surabaya",
+							"addressRegion": "{{contact.province}}",
+							"streetAddress": "Jl. Darmo Baru Barat VII/49",
+							"postalCode": "60189"
+						},
+						"geo": {
+							"@type": "GeoCoordinates",
+							"latitude": "-7.278643",
+							"longitude": "112.697670"
+						}
+					}
+				],
 				"address": {
 					"@type": "PostalAddress",
 					"addressCountry": "Indonesia",
 					"addressLocality": "Surabaya",
 					"addressRegion": "{{contact.province}}",
-					"streetAddress": "Jl. Raya Kuwukan No. 107 Kav. 4-5",
-					"postalCode": "60217"
+					"streetAddress": "Jl. Darmo Baru Barat VII/49",
+					"postalCode": "60189"
 				},
 				"geo": {
 					"@type": "GeoCoordinates",
-					"latitude": "-7.272737",
-					"longitude": "112.659813"
+					"latitude": "-7.278643",
+					"longitude": "112.697670"
 				},
 				"telephone": "+6281-251-220-220",
 				"makesOffer": [
@@ -239,11 +259,10 @@ html.no-js
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#pinpoint', data-i18n-link='xlink:href')
 							.contact__content
-								p.contact__detail Jl. Raya Kuwukan No. 107 Kav. 4-5
-								p.contact__sub-detail
-									span='Surabaya, '
-									span(data-i18n='contact.province')
-									span=', Indonesia, 60217'
+								a.contact__link(href='https://www.google.com/maps/?q=-7.278643,112.697670', target='_blank') Jl. Darmo Baru Barat VII/49
+								p.contact__sub-detail(data-i18n='contact.sby_office')
+								a.contact__link(href='https://www.google.com/maps/?q=-7.272737,112.659813', target='_blank') Jl. Raya Kuwukan No. 107 Kav. 4-5
+								p.contact__sub-detail(data-i18n='contact.sby_workshop')
 						.contact.js-contact
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#mail', data-i18n-link='xlink:href')

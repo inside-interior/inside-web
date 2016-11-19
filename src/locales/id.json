@@ -43,9 +43,12 @@
 		}
 	},
 	"contact": {
-		"title"    : "Kontak",
-		"subtitle" : "Kami sangat senang untuk mendengar interior impian Anda!",
-		"province" : "Jawa Timur"
+		"title"        : "Kontak",
+		"subtitle"     : "Kami sangat senang untuk mendengar interior impian Anda!",
+		"province"     : "Jawa Timur",
+		"office"       : "Kantor",
+		"sby_office"   : "Kantor Surabaya",
+		"sby_workshop" : "Workshop Surabaya"
 	},
 	"project": {
 		"next" : "Proyek Selanjutnya",

@@ -88,16 +88,14 @@
 		left: 0;
 		right: 0;
 	}
-}
 
-.contact__name {
-	&:first-of-type {
-		margin-bottom: rem(8);
+	.contact:nth-child(2) & {
+		word-wrap: break-word;
+
+		&::after {
+			background-image: none;
+		}
 	}
-}
-
-.contact__detail {
-	word-wrap: break-word;
 
 	@media (min-width: em(968)) {
 		.contact:nth-child(2) & {
@@ -112,4 +110,8 @@
 	font-size: 0.75em;
 	font-style: italic;
 	font-weight: bold;
+
+	&:first-of-type {
+		margin-bottom: rem(8);
+	}
 }

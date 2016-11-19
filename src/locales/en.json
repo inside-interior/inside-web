@@ -43,9 +43,12 @@
 		}
 	},
 	"contact": {
-		"title"    : "Contact",
-		"subtitle" : "We would love to hear from you!",
-		"province" : "East Java"
+		"title"        : "Contact",
+		"subtitle"     : "We would love to hear from you!",
+		"province"     : "East Java",
+		"office"       : "Office",
+		"sby_office"   : "Surabaya Office",
+		"sby_workshop" : "Surabaya Workshop"
 	},
 	"project": {
 		"next" : "Next Project",
