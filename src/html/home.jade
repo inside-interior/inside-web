@@ -251,9 +251,9 @@ html.no-js
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#phone', data-i18n-link='xlink:href')
 							.contact__content
-								a.contact__link(href='tel:+6281-251-220-220') +6281-251-220-220
+								a.contact__link(href='tel:+6281-251-220-220', onclick='goog_report_conversion("tel:+6281-251-220-220")') +6281-251-220-220
 								p.contact__name Agung Suryajaya Putra S. T.
-								a.contact__link(href='tel:+6285-236-727-777') +6285-236-727-777
+								a.contact__link(href='tel:+6285-236-727-777', onclick='goog_report_conversion("tel:+6285-236-727-777")') +6285-236-727-777
 								p.contact__name Randy Eka Pranoto S. T.
 						.contact.js-contact
 							svg.contact__logo
@@ -267,7 +267,7 @@ html.no-js
 							svg.contact__logo
 								use(xlink:href='images/icons.svg#mail', data-i18n-link='xlink:href')
 							.contact__content
-								a.contact__link(href='mailto:inside.interior@hotmail.com') inside.interior@hotmail.com
+								a.contact__link(href='mailto:inside.interior@hotmail.com', onclick='goog_report_conversion("mailto:inside.interior@hotmail.com")') inside.interior@hotmail.com
 		footer.footer
 			.footer__logo-wrapper
 				a.footer__soc-med-link(href='https://www.instagram.com/inside.interior', target='_blank')
@@ -278,3 +278,8 @@ html.no-js
 						use(xlink:href='images/icons.svg#fb', data-i18n-link='xlink:href')
 			p.footer__copyright © 2017 Inside Interior. All rights reserved.
 		script(type='text/javascript', src='/js/inline-body.js')
+		//- >>>>>>>>>>>>>> Google AdWords Conversion Tracking (oasisme) START
+		script.
+			goog_snippet_vars=function(){var o=window;o.google_conversion_id=858294567,o.google_conversion_label="H4N-CI6ymG8Qp5KimQM",o.google_conversion_value=0,o.google_conversion_currency="IDR",o.google_remarketing_only=!1},goog_report_conversion=function(o){goog_snippet_vars(),window.google_conversion_format="3";var n={};n.onload_callback=function(){void 0!==o&&(window.location=o)};var e=window.google_trackConversion;"function"==typeof e&&e(n)};
+		script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js', async='')
+		//- >>>>>>>>>>>>>> Google AdWords Conversion Tracking (oasisme) END
