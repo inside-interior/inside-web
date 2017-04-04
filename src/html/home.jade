@@ -281,5 +281,14 @@ html.no-js
 		//- >>>>>>>>>>>>>> Google AdWords Conversion Tracking (oasisme) START
 		script.
 			goog_snippet_vars=function(){var o=window;o.google_conversion_id=858294567,o.google_conversion_label="H4N-CI6ymG8Qp5KimQM",o.google_conversion_value=0,o.google_conversion_currency="IDR",o.google_remarketing_only=!1},goog_report_conversion=function(o){goog_snippet_vars(),window.google_conversion_format="3";var n={};n.onload_callback=function(){void 0!==o&&(window.location=o)};var e=window.google_trackConversion;"function"==typeof e&&e(n)};
-		script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js', async='')
+		script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js', async='', defer='')
 		//- >>>>>>>>>>>>>> Google AdWords Conversion Tracking (oasisme) END
+
+		//- >>>>>>>>>>>>>> Google Remarketing Tag (oasisme) START
+		script.
+			var google_conversion_id = 858294567, google_custom_params = window.google_tag_params, google_remarketing_only = true;
+		script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion.js', async='', defer='')
+		noscript
+			div(style='display:inline;')
+				img(height='1', width='1', style='border-style:none;', alt='', src='//googleads.g.doubleclick.net/pagead/viewthroughconversion/858294567/?guid=ON&amp;script=0')
+		//- >>>>>>>>>>>>>> Google Remarketing Tag (oasisme) END
