@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines" : { 
+    "node" : "5.7.0" 
+  },
   "scripts": {
     "scss": "mkdir -p dist/css && node-sass --output-style compressed src/css/ --output dist/css/",
     "autoprefixer": "mkdir -p dist/css && postcss --use autoprefixer --config autoprefixer-config.json --dir dist/css/ dist/css/*.css",
