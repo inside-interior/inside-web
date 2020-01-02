@@ -7,7 +7,8 @@ var
 		src    : './dist/images/projects_thumbnail/**/*.jpg',
 		split  : true,
 		name   : 'thumb',
-		margin : 0
+		margin : 0,
+		engine : 'jimp'
 	};
 
 sprity.create(sprity_options, function() {});
