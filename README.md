@@ -15,4 +15,5 @@ Website for Inside Interior (https://insideinterior.net/)
 # Deployment
 
 1. `npm run build`
-2. `npm run deploy`
+2. Do sanity check locally to make sure everything is alright by using `npm run serve`
+3. `npm run deploy`
