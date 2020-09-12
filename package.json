@@ -15,7 +15,7 @@
     "icons": "svgo -f src/images/icons -o dist/images/icons  && svg-sprite-generate -d dist/images/icons -o dist/images/icons.svg",
     "serve": "browser-sync start --server dist/ --files 'dist/index.html, dist/css/*.css, dist/js/*.js, dist/images/**/*.*'",
     "build:i18n": "node build-html-i18n.js",
-    "build:html": "node build-html.js && gulp inline-js && npm run build:i18n",
+    "build:html": "node build-html.js && gulp inlineJs && npm run build:i18n",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:font": "mkdir -p dist/font && cp -rf src/font dist",
     "build:js": "npm run lint && npm run browserify && npm run uglify",

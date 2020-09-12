@@ -3,8 +3,8 @@ var
 	inline = require('gulp-inline'),
 	uglify = require('gulp-uglify');
 
-gulp.task('inline-js', function () {
-	gulp.src('dist/**/*.html')
+function inlineJs() {
+	return gulp.src('dist/**/*.html')
 		.pipe(
 			inline(
 				{
@@ -16,4 +16,6 @@ gulp.task('inline-js', function () {
 			)
 		)
 		.pipe(gulp.dest('dist/'));
-});
+};
+
+exports.inlineJs = inlineJs;
