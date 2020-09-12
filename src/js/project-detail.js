@@ -1,5 +1,4 @@
 var
-	Modernizr    = require('modernizr'),
 	Flickity     = require('flickity'),
 	ScrollReveal = require('scrollreveal'),
 

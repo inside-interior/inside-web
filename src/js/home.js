@@ -1,6 +1,5 @@
 var
 	SmoothScroll = require('smooth-scroll'),
-	Modernizr    = require('modernizr'),
 	Flickity     = require('flickity'),
 	ScrollReveal = require('scrollreveal'),
 
