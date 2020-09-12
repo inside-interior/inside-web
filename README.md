@@ -4,7 +4,7 @@ Website for Inside Interior (https://insideinterior.net/)
 
 ## Requirements
 
-- `node 5.7.0`
+- `node 12.18.3`
 
 ## Installation
 

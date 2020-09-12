@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "5.7.0"
+    "node": "12.18.3"
   },
   "scripts": {
     "scss": "mkdir -p dist/css && node-sass --output-style compressed src/css/ --output dist/css/",
@@ -51,7 +51,7 @@
     "imagemin-cli": "^2.1.0",
     "jade": "^1.11.0",
     "mkdirp": "^0.5.1",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.14.1",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.5.1",
@@ -62,7 +62,6 @@
     "uglify-js": "^2.6.2"
   },
   "dependencies": {
-    "Modernizr": "https://modernizr.com/download/?-backgroundcliptext-setclasses.tar",
     "es6-promise": "^3.2.1",
     "flickity": "^1.2.1",
     "fontfaceobserver": "^1.7.1",
