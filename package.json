@@ -43,7 +43,7 @@
     "cheerio": "^0.22.0",
     "eslint": "^2.5.1",
     "fs": "0.0.2",
-    "grunt": "^1.0.1",
+    "grunt": "^1.5.2",
     "grunt-responsive-images": "^0.1.9",
     "gulp": "^4.0.2",
     "gulp-inline": "^0.1.1",
